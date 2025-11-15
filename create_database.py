@@ -30,7 +30,7 @@ splitter = RecursiveCharacterTextSplitter(
 )
 
 #Embedding model
-model_name = "sentence-transformers/all-MiniLM-L6-v2"
+model_name = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
 model_kwargs = {'device': 'cpu'}
 
 embedding_model= HuggingFaceEmbeddings(
