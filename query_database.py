@@ -37,40 +37,11 @@ Respuesta:
 response = llm.invoke(prompt_text)
 
 
-
-#--------------Mostrar resultados del RAG------------------------------------#
-
-"""""
-#Muestra las mejores coincidencias
-print("\n📘 RESULTADOS DE BÚSQUEDA 📘")
-print(f"Consulta: {query_text}\n{'='*80}")
-
-for i, (doc, score) in enumerate(results, start=1):
-    content_preview = doc.page_content.strip().replace("\n", " ")
-    if len(content_preview) > 300:
-        content_preview = content_preview[:300] + "..."
-    
-    print(f"\n🔹 Resultado {i}")
-    print(f"🔸 Relevancia: {score:.3f}")
-    print(f"📄 Contenido: {content_preview}")
-    print("-" * 80)
-
-# Mostrar de forma limpia
-print("\n📘 RESULTADO MÁS RELEVANTE 📘")
-print(f"Consulta: {query_text}")
-print("="*80)
-print(f"🔸 Relevancia: {top_score:.3f}")
-
-content_preview = top_doc.page_content.strip().replace("\n", " ")
-print(f"\n📄 Contenido:\n{content_preview}")
-print("="*80) 
-"""
-
 #---------------Mostrar resultados del LLM---------------------------#
-print("\n📘 RESPUESTA GENERADA POR IA (RAG) 📘")
+print("\RESPUESTA GENERADA POR IA (RAG)")
 print(f"Consulta: {query_text}")
 print("="*80)
-print(f"🤖 Respuesta:\n{response}")
+print(f"Respuesta:\n{response}")
 print("-" * 80)
-print(f"📚 Contexto Utilizado (Relevancia: {top_score:.3f}):\n{context}")
+print(f"Contexto Utilizado (Relevancia: {top_score:.3f}):\n{context}")
 print("="*80)
