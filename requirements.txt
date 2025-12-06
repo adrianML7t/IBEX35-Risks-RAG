@@ -1,32 +1,9 @@
-# Core del Modelo y Entorno (Fine-tuning y PyTorch)
-torch>=2.4.0
-unsloth>=2025.11.6
-unsloth-zoo>=2025.11.6
-trl
-peft
-accelerate
-bitsandbytes
-transformers
-datasets
-xformers # Optimización de atención
-sentencepiece # Tokenización
-tyro
-msgspec
-pyarrow
-dill
-multiprocess
-diffusers
-hf_transfer
-torchao
-triton-windows
-setuptools
-wheel
-
-# Componentes de RAG (LangChain y Chroma)
+langchain
 langchain-community
-langchain-text-splitters
 langchain-huggingface
 langchain-ollama
-langchain-core
-chroma-db
-pypdf # Para el cargador de PDF (PyPDFLoader)
+chromadb
+sentence-transformers
+pypdf
+unstructured
+torch
